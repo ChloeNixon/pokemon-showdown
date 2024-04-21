@@ -21,7 +21,7 @@ describe(`Slow Start`, function () {
 		for (let i = 0; i < 4; i++) { battle.makeChoices(); }
 		const log = battle.getDebugLog();
 		const slowStartEnd = log.indexOf('|-end|p1a: Regigigas|Slow Start');
-		assert(!(slowStartEnd > -1), 'Slow Start should remain in effect after 5 turns switchin in.');
+		assert(!(slowStartEnd > -1), 'Slow Start should remain in effect after 4 active turns.');
 	});
 
 	it(`Speed boost condition should be removed after 5 active turns`, function () {
