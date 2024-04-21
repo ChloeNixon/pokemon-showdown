@@ -4231,8 +4231,10 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			onStart(target) {
 				this.add('-start', target, 'ability: Slow Start');
 			},
-			onSwitchIn() {
-				this.effectState.duration = 6;
+			onResidual(pokemon) {
+				if (!pokemon.activeTurns) {
+					this.effectState.duration += 1;
+				}
 			},
 			onModifyAtkPriority: 5,
 			onModifyAtk(atk, pokemon) {
