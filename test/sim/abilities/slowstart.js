@@ -24,7 +24,7 @@ describe(`Slow Start`, function () {
 		assert(!(slowStartEnd > -1), 'Slow Start should remain in effect after 4 active turns.');
 	});
 
-	it(`Speed boost condition should be removed after 5 active turns`, function () {
+	it(`Slow Start should be removed after 5 active turns`, function () {
 		battle = common.createBattle([[
 			{species: 'diglett', moves: ['sleeptalk']},
 			{species: 'regigigas', ability: 'slowstart', item: 'normaliumz', moves: ['sleeptalk']},
